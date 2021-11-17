@@ -1,5 +1,6 @@
-package com.gomaa.videogames.base.data
+package com.gomaa.videogames.base.data.remote
 
+import android.util.Log
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
@@ -21,6 +22,7 @@ interface NetworkServiceCall {
 
                 NetworkResponse.Success(response)
             } catch (throwable: Exception) {
+                Log.d("safeApiCall", "safeApiCall: ${throwable.localizedMessage}")
                 NetworkResponse.Failure(throwable)
             }
         }

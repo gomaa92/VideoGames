@@ -3,9 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation_graph"
-    app:startDestination="@id/testFragment">
+    app:startDestination="@id/splashFragment">
     <fragment
-        android:id="@+id/testFragment"
-        android:name="com.gomaa.videogames.features.TestFragment"
-        tools:layout="@layout/fragment_test" />
+        android:id="@+id/splashFragment"
+        android:name="com.gomaa.videogames.features.splash.SplashFragment"
+        tools:layout="@layout/fragment_splash" />
+    <fragment
+        android:id="@+id/genresFragment"
+        android:name="com.gomaa.videogames.features.geners.presentation.view.fragments.GenresFragment"
+        tools:layout="@layout/fragment_genres" />
 </navigation>

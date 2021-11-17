@@ -1,4 +1,4 @@
-package com.gomaa.videogames.base.di.local
+package com.gomaa.videogames.base.data.local
 
 import android.content.SharedPreferences
 import javax.inject.Inject

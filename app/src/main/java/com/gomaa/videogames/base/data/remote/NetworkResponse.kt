@@ -1,4 +1,4 @@
-package com.gomaa.videogames.base.data
+package com.gomaa.videogames.base.data.remote
 
 /**
  * Common class used by API responses.

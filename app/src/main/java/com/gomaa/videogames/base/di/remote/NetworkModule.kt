@@ -14,44 +14,42 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Singleton
 
+@InstallIn(SingletonComponent::class)
+@Module
 object NetworkModule {
-    @InstallIn(SingletonComponent::class)
-    @Module
-    object NetworkModule {
-
-        @Provides
-        @Singleton
-        fun provideGson(): Gson {
-            val gsonBuilder = GsonBuilder()
-            return gsonBuilder.create()
-        }
-
-        @Provides
-        @Singleton
-        fun provideHttpClient(
-            httpLoggingInterceptor: HttpLoggingInterceptor,
-            @ApplicationContext context: Context,
-        ): OkHttpClient {
-            val builder = OkHttpClient.Builder()
-            builder.addInterceptor(httpLoggingInterceptor)
-            return builder.build()
-        }
-
-        @Provides
-        @Singleton
-        fun provideHttpLoggingInterceptor(): HttpLoggingInterceptor {
-            return HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY)
-        }
-
-        @Provides
-        @Singleton
-        fun provideRetrofit(gson: Gson, okHttpClient: OkHttpClient): Retrofit {
-            return Retrofit.Builder()
-                .baseUrl("https://rawg.io/")
-                .addConverterFactory(GsonConverterFactory.create(gson))
-                .client(okHttpClient)
-                .build()
-
-        }
+    @Provides
+    @Singleton
+    fun provideGson(): Gson {
+        val gsonBuilder = GsonBuilder()
+        return gsonBuilder.create()
     }
+
+    @Provides
+    @Singleton
+    fun provideHttpClient(
+        httpLoggingInterceptor: HttpLoggingInterceptor,
+        @ApplicationContext context: Context,
+    ): OkHttpClient {
+        val builder = OkHttpClient.Builder()
+        builder.addInterceptor(httpLoggingInterceptor)
+        return builder.build()
+    }
+
+    @Provides
+    @Singleton
+    fun provideHttpLoggingInterceptor(): HttpLoggingInterceptor {
+        return HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY)
+    }
+
+    @Provides
+    @Singleton
+    fun provideRetrofit(gson: Gson, okHttpClient: OkHttpClient): Retrofit {
+        return Retrofit.Builder()
+            .baseUrl("https://api.rawg.io/api/")
+            .addConverterFactory(GsonConverterFactory.create(gson))
+            .client(okHttpClient)
+            .build()
+
+    }
+
 }
