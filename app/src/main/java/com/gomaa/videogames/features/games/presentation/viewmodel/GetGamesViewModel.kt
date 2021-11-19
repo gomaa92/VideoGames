@@ -5,7 +5,7 @@ import androidx.lifecycle.liveData
 import androidx.lifecycle.viewModelScope
 import com.gomaa.videogames.base.presentation.viewmodel.BaseViewModel
 import com.gomaa.videogames.base.utils.PAGE_SIZE
-import com.gomaa.videogames.features.games.domain.model.params.GetGamesParams
+import com.gomaa.videogames.features.games.data.model.params.GetGamesParams
 import com.gomaa.videogames.features.games.domain.usecase.GetGamesUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers

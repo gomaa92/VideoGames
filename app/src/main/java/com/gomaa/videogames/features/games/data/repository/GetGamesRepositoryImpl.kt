@@ -1,12 +1,12 @@
 package com.gomaa.videogames.features.games.data.repository
 
 import android.util.Log
-import com.gomaa.videogames.base.data.local.ISharedPrefsStore
-import com.gomaa.videogames.base.data.local.SharedPreferencesConstants
+import com.gomaa.videogames.base.data.local.sharedpref.ISharedPrefsStore
+import com.gomaa.videogames.base.data.local.sharedpref.SharedPreferencesConstants
 import com.gomaa.videogames.base.data.remote.NetworkResponse
 import com.gomaa.videogames.features.games.data.remote.GetGamesRemoteDataSource
-import com.gomaa.videogames.features.games.domain.model.entities.ListGamesResponse
-import com.gomaa.videogames.features.games.domain.model.params.GetGamesParams
+import com.gomaa.videogames.features.games.data.model.entities.ListGamesResponse
+import com.gomaa.videogames.features.games.data.model.params.GetGamesParams
 import com.gomaa.videogames.features.games.domain.repository.GetGamesRepository
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken

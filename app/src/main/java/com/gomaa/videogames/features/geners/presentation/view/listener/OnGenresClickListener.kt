@@ -1,7 +1,6 @@
 package com.gomaa.videogames.features.geners.presentation.view.listener
 
-import com.gomaa.videogames.features.geners.domain.data.entities.GenresObject
-import java.text.FieldPosition
+import com.gomaa.videogames.features.geners.data.model.entities.GenresObject
 
 interface OnGenresClickListener {
     fun onItemClicked(item: GenresObject,position: Int)

@@ -1,7 +1,7 @@
 package com.gomaa.videogames.features.games.presentation.viewmodel
 
 import com.gomaa.videogames.base.presentation.viewmodel.ViewState
-import com.gomaa.videogames.features.games.domain.model.entities.ListGamesResponse
+import com.gomaa.videogames.features.games.data.model.entities.ListGamesResponse
 
 sealed class GetGamesViewState : ViewState {
     object Loading : GetGamesViewState()

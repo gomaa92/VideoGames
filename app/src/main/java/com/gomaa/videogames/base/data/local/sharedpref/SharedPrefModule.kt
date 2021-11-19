@@ -1,4 +1,4 @@
-package com.gomaa.videogames.base.data.local
+package com.gomaa.videogames.base.data.local.sharedpref
 
 import android.content.Context
 import android.content.SharedPreferences

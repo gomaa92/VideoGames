@@ -5,7 +5,7 @@ import com.gomaa.videogames.R
 import com.gomaa.videogames.base.utils.Utils
 import com.gomaa.videogames.base.presentation.view.adapter.BaseRecyclerViewAdapter
 import com.gomaa.videogames.databinding.GenresLayoutItemBinding
-import com.gomaa.videogames.features.games.domain.model.entities.GameEntity
+import com.gomaa.videogames.features.games.data.model.entities.GameEntity
 
 class GamesAdapter() :
     BaseRecyclerViewAdapter<GameEntity, GenresLayoutItemBinding, GamesAdapter.ListGamesViewHolder>(

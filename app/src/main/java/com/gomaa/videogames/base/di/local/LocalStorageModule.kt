@@ -1,7 +1,7 @@
 package com.gomaa.videogames.base.di.local
 
-import com.gomaa.videogames.base.data.local.ISharedPrefsStore
-import com.gomaa.videogames.base.data.local.SharedPrefsStore
+import com.gomaa.videogames.base.data.local.sharedpref.ISharedPrefsStore
+import com.gomaa.videogames.base.data.local.sharedpref.SharedPrefsStore
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn

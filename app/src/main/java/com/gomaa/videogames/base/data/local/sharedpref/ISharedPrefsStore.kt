@@ -1,4 +1,4 @@
-package com.gomaa.videogames.base.data.local
+package com.gomaa.videogames.base.data.local.sharedpref
 
 interface ISharedPrefsStore {
     fun saveString(key: String, value: String)

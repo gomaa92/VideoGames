@@ -1,7 +1,7 @@
 package com.gomaa.videogames.features.geners.presentation.viewmodel
 
 import com.gomaa.videogames.base.presentation.viewmodel.ViewState
-import com.gomaa.videogames.features.geners.domain.data.entities.GenresResponse
+import com.gomaa.videogames.features.geners.data.model.entities.GenresResponse
 
 sealed class GetGenresViewState:ViewState {
     object InitialState : GetGenresViewState()

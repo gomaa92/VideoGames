@@ -8,7 +8,7 @@ import androidx.navigation.fragment.findNavController
 import com.gomaa.videogames.R
 import com.gomaa.videogames.base.presentation.view.fragments.BaseFragment
 import com.gomaa.videogames.databinding.FragmentGenresBinding
-import com.gomaa.videogames.features.geners.domain.data.entities.GenresObject
+import com.gomaa.videogames.features.geners.data.model.entities.GenresObject
 import com.gomaa.videogames.features.geners.presentation.view.adapter.GenresAdapter
 import com.gomaa.videogames.features.geners.presentation.view.listener.OnGenresClickListener
 import com.gomaa.videogames.features.geners.presentation.viewmodel.GetGenresActions

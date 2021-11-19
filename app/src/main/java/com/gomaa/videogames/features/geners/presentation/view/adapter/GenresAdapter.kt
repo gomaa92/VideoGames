@@ -5,7 +5,7 @@ import com.gomaa.videogames.R
 import com.gomaa.videogames.base.utils.Utils
 import com.gomaa.videogames.base.presentation.view.adapter.BaseRecyclerViewAdapter
 import com.gomaa.videogames.databinding.GenresLayoutItemBinding
-import com.gomaa.videogames.features.geners.domain.data.entities.GenresObject
+import com.gomaa.videogames.features.geners.data.model.entities.GenresObject
 import com.gomaa.videogames.features.geners.presentation.view.listener.OnGenresClickListener
 
 class GenresAdapter(private val mListener: OnGenresClickListener) :

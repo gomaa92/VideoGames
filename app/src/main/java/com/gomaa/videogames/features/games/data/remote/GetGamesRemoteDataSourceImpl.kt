@@ -2,8 +2,8 @@ package com.gomaa.videogames.features.games.data.remote
 
 import com.gomaa.videogames.base.data.remote.CloudConfig
 import com.gomaa.videogames.base.data.remote.NetworkResponse
-import com.gomaa.videogames.features.games.domain.model.entities.ListGamesResponse
-import com.gomaa.videogames.features.games.domain.model.params.GetGamesParams
+import com.gomaa.videogames.features.games.data.model.entities.ListGamesResponse
+import com.gomaa.videogames.features.games.data.model.params.GetGamesParams
 import javax.inject.Inject
 
 class GetGamesRemoteDataSourceImpl @Inject constructor(

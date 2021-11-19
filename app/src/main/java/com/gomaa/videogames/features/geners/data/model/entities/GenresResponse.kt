@@ -1,4 +1,4 @@
-package com.gomaa.videogames.features.geners.domain.data.entities
+package com.gomaa.videogames.features.geners.data.model.entities
 
 import com.google.gson.annotations.SerializedName
 

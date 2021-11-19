@@ -7,8 +7,8 @@ import android.view.animation.AnimationUtils
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.gomaa.videogames.R
-import com.gomaa.videogames.base.data.local.ISharedPrefsStore
-import com.gomaa.videogames.base.data.local.SharedPreferencesConstants
+import com.gomaa.videogames.base.data.local.sharedpref.ISharedPrefsStore
+import com.gomaa.videogames.base.data.local.sharedpref.SharedPreferencesConstants
 import com.gomaa.videogames.base.presentation.view.fragments.BaseFragment
 import com.gomaa.videogames.databinding.FragmentSplashBinding
 import dagger.hilt.android.AndroidEntryPoint

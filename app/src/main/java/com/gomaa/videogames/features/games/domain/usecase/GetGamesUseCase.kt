@@ -2,7 +2,7 @@ package com.gomaa.videogames.features.games.domain.usecase
 
 import com.gomaa.videogames.base.data.remote.NetworkResponse
 import com.gomaa.videogames.base.domain.usecase.SuspendableUseCase
-import com.gomaa.videogames.features.games.domain.model.params.GetGamesParams
+import com.gomaa.videogames.features.games.data.model.params.GetGamesParams
 import com.gomaa.videogames.features.games.domain.repository.GetGamesRepository
 import com.gomaa.videogames.features.games.presentation.viewmodel.GetGamesResult
 import dagger.hilt.android.scopes.ViewModelScoped

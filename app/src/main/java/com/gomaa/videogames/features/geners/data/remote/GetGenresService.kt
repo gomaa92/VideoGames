@@ -1,7 +1,7 @@
 package com.gomaa.videogames.features.geners.data.remote
 
 import com.gomaa.videogames.base.data.remote.CloudConfig
-import com.gomaa.videogames.features.geners.domain.data.entities.GenresResponse
+import com.gomaa.videogames.features.geners.data.model.entities.GenresResponse
 import retrofit2.http.GET
 import retrofit2.http.Query
 

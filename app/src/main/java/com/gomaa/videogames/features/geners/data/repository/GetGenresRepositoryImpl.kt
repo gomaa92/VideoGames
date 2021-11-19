@@ -1,10 +1,10 @@
 package com.gomaa.videogames.features.geners.data.repository
 
-import com.gomaa.videogames.base.data.local.ISharedPrefsStore
-import com.gomaa.videogames.base.data.local.SharedPreferencesConstants
+import com.gomaa.videogames.base.data.local.sharedpref.ISharedPrefsStore
+import com.gomaa.videogames.base.data.local.sharedpref.SharedPreferencesConstants
 import com.gomaa.videogames.base.data.remote.NetworkResponse
 import com.gomaa.videogames.features.geners.data.remote.GetGenresRemoteDataSource
-import com.gomaa.videogames.features.geners.domain.data.entities.GenresResponse
+import com.gomaa.videogames.features.geners.data.model.entities.GenresResponse
 import com.gomaa.videogames.features.geners.domain.repository.GetGenresRepository
 import com.google.gson.Gson
 import javax.inject.Inject
