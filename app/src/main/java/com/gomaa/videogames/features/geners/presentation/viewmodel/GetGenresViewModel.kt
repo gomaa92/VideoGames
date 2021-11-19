@@ -6,6 +6,7 @@ import androidx.lifecycle.viewModelScope
 import com.gomaa.videogames.base.presentation.viewmodel.BaseViewModel
 import com.gomaa.videogames.features.geners.domain.usecase.GetGenresUseCase
 import com.gomaa.videogames.features.geners.domain.usecase.SaveGenresIdsUseCase
+import com.gomaa.videogames.features.geners.domain.usecase.SaveOpenGenresUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import javax.inject.Inject
@@ -13,7 +14,8 @@ import javax.inject.Inject
 @HiltViewModel
 class GetGenresViewModel @Inject constructor(
     private val useCase: GetGenresUseCase,
-    private val saveUseCase: SaveGenresIdsUseCase
+    private val saveUseCase: SaveGenresIdsUseCase,
+    private val saveOpenGenresUseCase: SaveOpenGenresUseCase
 ) : BaseViewModel<GetGenresViewState, GetGenresActions, GetGenresResult>() {
     override val internalViewState: GetGenresViewState
         get() = GetGenresViewState.InitialState
@@ -32,6 +34,7 @@ class GetGenresViewModel @Inject constructor(
             }
             is GetGenresActions.HandleGenresId -> handleGenresId(action.id)
             GetGenresActions.FinishSelectGenres -> emit(saveUseCase.execute(genresIds))
+            GetGenresActions.FirstOpen -> saveOpenGenresUseCase.execute()
         }
     }
 

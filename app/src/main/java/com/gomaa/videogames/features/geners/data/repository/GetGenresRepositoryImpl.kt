@@ -1,8 +1,8 @@
 package com.gomaa.videogames.features.geners.data.repository
 
-import com.gomaa.videogames.base.data.remote.NetworkResponse
 import com.gomaa.videogames.base.data.local.ISharedPrefsStore
 import com.gomaa.videogames.base.data.local.SharedPreferencesConstants
+import com.gomaa.videogames.base.data.remote.NetworkResponse
 import com.gomaa.videogames.features.geners.data.remote.GetGenresRemoteDataSource
 import com.gomaa.videogames.features.geners.domain.data.entities.GenresResponse
 import com.gomaa.videogames.features.geners.domain.repository.GetGenresRepository
@@ -23,6 +23,13 @@ class GetGenresRepositoryImpl @Inject constructor(
             SharedPreferencesConstants.SAVED_GENRES_IDS,
             convertListToJson(ids)
         )
+    }
+
+    override suspend fun saveGenresOpen(): Boolean {
+        sharedPrefsStore.saveBoolean(
+            SharedPreferencesConstants.FIRST_LAUNCH_APP, true
+        )
+        return true
     }
 
     private fun convertListToJson(ids: ArrayList<Int>): String {

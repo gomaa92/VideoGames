@@ -7,4 +7,5 @@ interface GetGenresRepository {
     suspend fun getGenres(): NetworkResponse<GenresResponse>
 
     suspend fun saveGenresId(ids: ArrayList<Int>)
+    suspend fun saveGenresOpen(): Boolean
 }

@@ -30,4 +30,15 @@ class SharedPrefsStore @Inject constructor(private val sharedPreferences: Shared
         return sharedPreferences.getString(key, "") ?: ""
     }
 
+    override fun saveBoolean(key: String, value: Boolean) {
+        with(sharedPreferences.edit()) {
+            this?.putBoolean(key, value)
+            this?.apply()
+        }
+    }
+
+    override fun getBoolean(key: String): Boolean {
+        return sharedPreferences.getBoolean(key, false)
+    }
+
 }

@@ -54,7 +54,10 @@ class GenresFragment : BaseFragment<FragmentGenresBinding>(R.layout.fragment_gen
                     hideLoading()
                     adapter.setItems(it.response?.results)
                 }
-                GetGenresViewState.FinishSaveIds -> findNavController().navigate(R.id.gamesFragment)
+                GetGenresViewState.FinishSaveIds -> {
+                    viewModel dispatch GetGenresActions.FirstOpen
+                    findNavController().navigate(R.id.gamesFragment)
+                }
             }
         }
     }
