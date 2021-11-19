@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import com.gomaa.videogames.R
 import com.gomaa.videogames.base.presentation.view.fragments.BaseFragment
 import com.gomaa.videogames.databinding.FragmentGenresBinding
@@ -53,11 +54,7 @@ class GenresFragment : BaseFragment<FragmentGenresBinding>(R.layout.fragment_gen
                     hideLoading()
                     adapter.setItems(it.response?.results)
                 }
-                GetGenresViewState.FinishSaveIds -> Toast.makeText(
-                    requireContext(),
-                    "navigate",
-                    Toast.LENGTH_SHORT
-                ).show()
+                GetGenresViewState.FinishSaveIds -> findNavController().navigate(R.id.gamesFragment)
             }
         }
     }

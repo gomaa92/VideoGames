@@ -11,7 +11,7 @@ import retrofit2.Retrofit
 @Module
 class GeneresAPIModule {
     @Provides
-    fun provideLogInApi(retrofit: Retrofit): GetGenresService {
+    fun getGenresService(retrofit: Retrofit): GetGenresService {
         return retrofit.create(GetGenresService::class.java)
     }
 }

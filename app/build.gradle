@@ -98,4 +98,7 @@ dependencies {
     implementation "com.airbnb.android:lottie:$lottieVersion"
     //Pref
     implementation "androidx.preference:preference-ktx:$pref_version"
+
+    //swipe refresh
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0'
 }

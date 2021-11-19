@@ -21,7 +21,7 @@ class GetGenresViewModel @Inject constructor(
     //TODO should be provided by Hilt
     private val context = viewModelScope.coroutineContext + Dispatchers.Default
 
-    private lateinit var genresIds: ArrayList<Int>
+    private var genresIds: ArrayList<Int> = ArrayList()
 
     override fun handle(action: GetGenresActions): LiveData<GetGenresResult> = liveData(context) {
         when (action) {
@@ -36,7 +36,7 @@ class GetGenresViewModel @Inject constructor(
     }
 
     private fun handleGenresId(id: Int) {
-        genresIds = ArrayList()
+
         if (genresIds.contains(id)) {
             genresIds.remove(id)
             return

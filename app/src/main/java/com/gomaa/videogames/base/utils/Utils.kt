@@ -1,4 +1,4 @@
-package com.gomaa.videogames.base
+package com.gomaa.videogames.base.utils
 
 import android.content.Context
 import android.widget.ImageView
